@@ -43,12 +43,12 @@ function createModal(event) {
       />
     </div>`,
     {
-      onShow: () => {
-        window.addEventListener("keydown", onEscPress);
+      onShow: (instance) => {
+        document.addEventListener("keydown", onEscPress);
       },
 
-      onClose: () => {
-        window.removeEventListener("keydown", onEscPress);
+      onClose: (instance) => {
+        document.removeEventListener("keydown", onEscPress);
       },
     }
   );
